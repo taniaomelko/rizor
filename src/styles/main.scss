@@ -1,7 +1,21 @@
-@import "utils";
+@import "vars";
+@import "reset";
+@import "mixins";
 @import "fonts";
 @import "typography";
+@import "global";
 
-body {
-  background: $c-gray;
-}
+@import "header";
+@import "nav";
+
+@import "mobile-menu";
+@import "promo";
+
+@import "container";
+
+@import "for-whom";
+@import "footer";
+
+// .main {
+//   position: relative;
+// }

@@ -1,0 +1,79 @@
+.promo {
+  background: url(../images/gear.png) no-repeat;
+  @include container;
+
+  &__container {
+    position: relative;
+  }
+
+  &__info {
+    padding: 199px 0 70px;
+  }
+
+  &__title {
+    width: 740px;
+    margin-bottom: 49px;
+    letter-spacing: 0.08em;
+
+    &--span {
+      letter-spacing: -0.15em;
+    }
+  }
+
+  &__subtitle {
+    width: 340px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 42px;
+  }
+
+  &__arrow {
+    background: url(../images/promo-arrow.png) center no-repeat;
+    width: 11px;
+    height: 95px;
+    margin-left: 30px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: -380px;
+    z-index: -1;
+  }
+
+  &__video {
+    position: absolute;
+    top: 90px;
+    left: 400px;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+  }
+
+  &__text-play {
+    place-self: center;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+  }
+
+  &__arrow-play {
+    background: url(../images/promo-arrow-video.png) center no-repeat;
+    width: 18px;
+    height: 72px;
+  }
+
+  &__play {
+    background: url(../images/promo-arrow-play.png) center no-repeat;
+    width: 74px;
+    height: 81px;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.nav {
+  @media (max-width: $tabletBreakpoint) {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__item {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  &__link {
+    padding: 10px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $c-accent;
+    }
+  }
+}

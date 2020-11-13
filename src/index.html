@@ -3,11 +3,151 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Rizor</title>
     <link rel="stylesheet" href="./styles/main.scss">
+    <link
+      rel="shortcut icon"
+      href="./images/logo-icon.png"
+      type="image/x-icon"
+    >
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo" href="#">
+          <img
+            class="header__logo-img"
+            src="./images/logo.png"
+            alt="logo"
+          >
+        </a>
+
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="pros" class="nav__link">
+                Преимущества
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#characteristics" class="nav__link">
+                Характеристики
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#for-whom" class="nav__link">
+                Для кого
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <input
+          class="header__toggler"
+          type="checkbox"
+          id="toggler"
+        >
+        <label class="header__label" for="toggler">
+          <div class="header__burger">
+            <div class="header__burger-line header__burger-line--1"></div>
+            <div class="header__burger-line header__burger-line--2"></div>
+            <div class="header__burger-line header__burger-line--3"></div>
+          </div>
+        </label>
+
+        <div class="header__mobile-menu mobile-menu">
+          <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a href="#pros" class="mobile-menu__link">
+                  Преимущества
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#characteristics" class="mobile-menu__link">
+                  Характеристики
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#for-whom" class="mobile-menu__link">
+                  Для кого
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="promo">
+        <div class="promo__container container">
+          <div class="promo__info">
+            <h1 class="promo__title">
+              Rizor Hovertrax
+              <span class="promo__title--span">
+                4.0
+              </span>
+            </h1>
+            <div class="promo__subtitle">
+              Маневренность, легкость, экологичность
+            </div>
+            <div class="promo__arrow">
+            </div>
+          </div>
+
+          <div class="promo__video">
+            <div class="promo__text-play">
+              Смотреть видео
+            </div>
+            <button type="button" class="promo__play">
+            </button>
+            <div class="promo__arrow-play">
+            </div>
+          </div>
+
+          <img
+            class="promo__img"
+            src="./images/promo.png"
+            alt="promo"
+          >
+        </div>
+      </section>
+
+      <section class="for-whom" id="for-whom">
+        <div class="for-whom__container container">
+          <div class="for-whom__info">
+            <h3 class="for-whom__title">
+              Для кого
+            </h3>
+            <div class="for-whom__text">
+              <div>
+                При максимально выдерживаемой нагрузке в <span class="for-whom__text--span">100 кг</span> отлично подойдёт, как для подрастающего поколения, так и для более взрослых «наездников».
+              </div>
+              <div>
+                Это единственный гироскутер со специальным детским режимом езды.
+              </div>
+            </div>
+            <button class="for-whom__button">
+              Перейти в каталог
+            </button>
+          </div>
+
+          <img
+            class="for-whom__img"
+            src="./images/for-whom.png"
+            alt="for-whom"
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        © All rights reserved, 2020
+      </div>
+    </footer>
+
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
