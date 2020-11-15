@@ -15,12 +15,16 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 400px;
     gap: 110px;
     left: -390px;
 
     @media (max-width: $bigScreenBreakpoint) {
       left: 0;
+    }
+
+    @media (max-width: $desktopBreakpoint) {
+      grid-template-columns: 1fr 300px;
     }
 
     @media (max-width: 1000px) {
@@ -52,13 +56,12 @@
     object-fit: cover;
 
     @media (max-width: $desktopBreakpoint) {
-      width: calc(100vw - 410px);
+      width: 100%;
       height: $videoHeightDesktop;
     }
 
     @media (max-width: 1000px) {
       position: relative;
-      width: 100%;
       height: $videoHeightDesktop;
     }
 
@@ -81,7 +84,7 @@
   &__info {
     margin-left: auto;
 
-    @media (max-width: $tabletBreakpoint) {
+    @media (max-width: $bigScreenBreakpoint) {
       margin-left: 0;
     }
   }
