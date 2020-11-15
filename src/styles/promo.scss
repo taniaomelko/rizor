@@ -1,19 +1,75 @@
 .promo {
+  padding-bottom: 200px;
   background: url(../images/gear.png) no-repeat;
-  @include container;
+
+  @media (max-width: $bigScreenBreakpoint) {
+    padding-bottom: 120px;
+    background-size: 20%;
+  }
+
+  @media (max-width: $desktopBreakpoint) {
+    padding-bottom: 120px;
+  }
+
+  @media (max-width: 1000px) {
+    padding-bottom: 80px;
+    background: none;
+  }
+
+  @media (max-width: $mobileBreakpoint) {
+    padding-bottom: 50px;
+  }
 
   &__container {
-    position: relative;
+    display: flex;
+
+    @media (max-width: 1000px) {
+      display: block;
+    }
   }
 
   &__info {
-    padding: 199px 0 70px;
+    padding-top: 200px;
+
+    @media (max-width: $bigScreenBreakpoint) {
+      padding-top: 85px;
+    }
+
+    @media (max-width: 1000px) {
+      padding-top: 30px;
+    }
+
+    @media (max-width: $mobileBreakpoint) {
+      padding-top: 20px;
+    }
   }
 
   &__title {
     width: 740px;
     margin-bottom: 49px;
+    font-family: "RubikMonoOne", sans-serif;
+    font-size: 80px;
     letter-spacing: 0.08em;
+
+    @media (max-width: $bigScreenBreakpoint) {
+      font-size: 70px;
+    }
+
+    @media (max-width: $desktopBreakpoint) {
+      width: 400px;
+      font-size: 58px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 1000px) {
+      width: 100%;
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: $mobileBreakpoint) {
+      font-size: 34px;
+    }
 
     &--span {
       letter-spacing: -0.15em;
@@ -24,56 +80,88 @@
     width: 340px;
     font-size: 20px;
     font-weight: bold;
-    line-height: 30px;
+    line-height: 150%;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 42px;
+
+    @media (max-width: $bigScreenBreakpoint) {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 1000px) {
+      width: 270px;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $mobileBreakpoint) {
+      width: 100%;
+    }
   }
 
-  &__arrow {
-    background: url(../images/promo-arrow.png) center no-repeat;
+  &__arrow-blue {
+    background: url(../images/promo__arrow.png) center no-repeat;
     width: 11px;
     height: 95px;
     margin-left: 30px;
+
+    @media (max-width: $bigScreenBreakpoint) {
+      display: none;
+    }
+  }
+
+  &__picture {
+    position: relative;
   }
 
   &__img {
-    position: absolute;
-    top: 0;
-    right: -380px;
+    position: relative;
+    object-fit: cover;
+    right: 265px;
     z-index: -1;
+
+    @media (max-width: $bigScreenBreakpoint) {
+      width: calc(100% + 265px);
+    }
+
+    @media (max-width: $desktopBreakpoint) {
+      right: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 1000px) {
+      height: $videoHeightDesktop;
+    }
+
+    @media (max-width: $tabletBreakpoint) {
+      height: $videoHeightTablet;
+    }
+
+    @media (max-width: $mobileBreakpoint) {
+      height: $videoHeightMobile;
+    }
   }
 
-  &__video {
-    position: absolute;
+  &__watch-video {
     top: 90px;
-    left: 400px;
-    display: grid;
-    grid-template-columns: 40px 1fr;
+    left: -340px;
+
+    @media (max-width: $bigScreenBreakpoint) {
+      left: -300px;
+    }
   }
 
-  &__text-play {
-    place-self: center;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transform: rotate(-90deg);
-  }
-
-  &__arrow-play {
-    background: url(../images/promo-arrow-video.png) center no-repeat;
+  &__arrow {
+    background: url(../images/promo__arrow-video.png) center no-repeat;
     width: 18px;
     height: 72px;
-  }
+    position: absolute;
+    top: 180px;
+    left: -340px;
 
-  &__play {
-    background: url(../images/promo-arrow-play.png) center no-repeat;
-    width: 74px;
-    height: 81px;
-    transition: transform 0.3s;
-
-    &:hover {
-      transform: scale(1.1);
+    @media (max-width: $bigScreenBreakpoint) {
+      display: none;
     }
   }
 }

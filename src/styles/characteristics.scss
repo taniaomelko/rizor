@@ -1,0 +1,140 @@
+.characteristics {
+  padding-bottom: 180px;
+  background: url(../images/gear.png) no-repeat;
+
+  @media (max-width: $bigScreenBreakpoint) {
+    background-size: 20%;
+  }
+
+  @media (max-width: 1000px) {
+    padding-bottom: 80px;
+    background: none;
+  }
+
+  @media (max-width: $mobileBreakpoint) {
+    padding-bottom: 50px;
+  }
+
+  &__container {
+    display: flex;
+
+    @media (max-width: $bigScreenBreakpoint) {
+      gap: 100px;
+    }
+
+    @media (max-width: 1000px) {
+      display: block;
+    }
+  }
+
+  &__info {
+    padding: 100px 0;
+
+    @media (max-width: $desktopBreakpoint) {
+      padding: 50px 0;
+    }
+
+    @media (max-width: 1000px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 100px;
+      padding-top: 0;
+    }
+
+    @media (max-width: $tabletBreakpoint) {
+      display: block;
+      padding: 0 0 50px;
+    }
+  }
+
+  &__text-block {
+    margin-bottom: 87px;
+
+    @media (max-width: 1000px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__data {
+    display: flex;
+    gap: 70px;
+
+    @media (max-width: 1000px) {
+      gap: 60px;
+    }
+
+    @media (max-width: $mobileBreakpoint) {
+      gap: 40px;
+    }
+  }
+
+  &__number {
+    color: $c-accent;
+    font-size: 60px;
+    font-family: "RubikMonoOne", sans-serif;
+
+    @media (max-width: $tabletBreakpoint) {
+      font-size: 50px;
+    }
+
+    &--span {
+      font-size: 24px;
+      letter-spacing: -0.07em;
+
+      @media (max-width: $mobileBreakpoint) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__picture {
+    position: relative;
+  }
+
+  &__watch-video {
+    top: 600px;
+    left: 65px;
+
+    @media (max-width: $bigScreenBreakpoint) {
+      left: -40px;
+      top: 100px;
+    }
+  }
+
+  &__arrow {
+    background: url(../images/characteristics__arrow-video.png) center no-repeat;
+    width: 157px;
+    height: 474px;
+    position: absolute;
+    top: 120px;
+    left: -75px;
+
+    @media (max-width: $bigScreenBreakpoint) {
+      display: none;
+    }
+  }
+
+  &__img {
+    position: relative;
+    object-fit: cover;
+    right: -140px;
+    z-index: -1;
+
+    @media (max-width: $bigScreenBreakpoint) {
+      width: 100%;
+      right: 0;
+    }
+
+    @media (max-width: 1000px) {
+      height: $videoHeightDesktop;
+    }
+
+    @media (max-width: $tabletBreakpoint) {
+      height: $videoHeightTablet;
+    }
+
+    @media (max-width: $mobileBreakpoint) {
+      height: $videoHeightMobile;
+    }
+  }
+}

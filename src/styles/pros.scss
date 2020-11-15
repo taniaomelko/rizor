@@ -1,0 +1,193 @@
+.pros {
+  padding-bottom: 175px;
+
+  @media (max-width: $bigScreenBreakpoint) {
+    padding-bottom: 120px;
+  }
+
+  @media (max-width: 1000px) {
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: $mobileBreakpoint) {
+    padding-bottom: 50px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 110px;
+    left: -390px;
+
+    @media (max-width: $bigScreenBreakpoint) {
+      left: 0;
+    }
+
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+
+    @media (max-width: $tabletBreakpoint) {
+      gap: 30px;
+    }
+  }
+
+  &__picture {
+    position: relative;
+    height: 750px;
+
+    @media (max-width: $desktopBreakpoint) {
+      height: $videoHeightDesktop;
+    }
+
+    @media (max-width: 1000px) {
+      height: 100%;
+      order: 1;
+    }
+  }
+
+  &__img {
+    position: relative;
+    object-fit: cover;
+
+    @media (max-width: $desktopBreakpoint) {
+      width: calc(100vw - 410px);
+      height: $videoHeightDesktop;
+    }
+
+    @media (max-width: 1000px) {
+      position: relative;
+      width: 100%;
+      height: $videoHeightDesktop;
+    }
+
+    @media (max-width: $tabletBreakpoint) {
+      height: $videoHeightTablet;
+    }
+
+    @media (max-width: $mobileBreakpoint) {
+      height: $videoHeightMobile;
+    }
+  }
+
+  &__watch-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__info {
+    margin-left: auto;
+
+    @media (max-width: $tabletBreakpoint) {
+      margin-left: 0;
+    }
+  }
+
+  &__blocks {
+    display: grid;
+    grid-template-columns: 270px 225px;
+    gap: 160px;
+
+    @media (max-width: $bigScreenBreakpoint) {
+      grid-template-columns: 300px;
+      gap: 50px;
+    }
+
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 100px;
+      justify-content: space-between;
+    }
+
+    @media (max-width: $tabletBreakpoint) {
+      gap: 30px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__block {
+    &--color {
+      padding-top: 240px;
+      position: relative;
+
+      @media (max-width: $bigScreenBreakpoint) {
+        padding-top: 0;
+      }
+
+      @media (max-width: $mobileBreakpoint) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__arrow {
+    background: url(../images/pros__arrow.png) no-repeat center;
+    width: 18px;
+    height: 290px;
+    position: absolute;
+    bottom: 230px;
+    left: -50px;
+
+    @media (max-width: $bigScreenBreakpoint) {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $c-accent;
+    margin-top: 100px;
+    margin-bottom: 83px;
+
+    @media (max-width: $bigScreenBreakpoint) {
+      margin-top: 50px;
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: 1000px) {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__bg {
+    font-family: "RubikMonoOne", sans-serif;
+    font-size: 170px;
+    letter-spacing: 0.08em;
+    text-align: right;
+    line-height: 100%;
+    color: #f8f8f8;
+    transform: rotate(-90deg);
+    transform-origin: right top;
+    position: absolute;
+    top: -120px;
+    right: -300px;
+    display: block;
+    width: 800px;
+    z-index: -1;
+
+    @media (max-width: $bigScreenBreakpoint) {
+      display: none;
+    }
+
+    @media (max-width: $tabletBreakpoint) {
+      display: block;
+      top: -50px;
+      right: 250px;
+      font-size: 120px;
+    }
+
+    @media (max-width: $mobileBreakpoint) {
+      display: none;
+    }
+
+    &--span {
+      letter-spacing: -0.25em;
+      padding-right: 40px;
+    }
+  }
+}

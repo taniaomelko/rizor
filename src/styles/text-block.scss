@@ -1,0 +1,96 @@
+.text-block {
+  position: relative;
+
+  &__title {
+    font-size: 34px;
+    letter-spacing: 0.08em;
+    font-family: "RubikMonoOne", sans-serif;
+    margin-bottom: 30px;
+
+    @media (max-width: 1000px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: $mobileBreakpoint) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 20px;
+    max-width: 310px;
+
+    @media (max-width: 1000px) {
+      max-width: 100%;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    margin-left: 25px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 18px;
+      height: 3px;
+      background-color: #000;
+      position: relative;
+      left: -25px;
+      bottom: -12px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__points {
+    display: flex;
+    justify-content: space-between;
+    max-width: calc(20px * 5 + 30px * 4);
+    margin: 62px 0 32px 30px;
+
+    @media (max-width: 1000px) {
+      margin: 0 0 20px 30px;
+    }
+
+    @media (max-width: $mobileBreakpoint) {
+      margin-left: 0;
+    }
+  }
+
+  &__point {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #000;
+
+    &--yellow {
+      background-color: #e2e837;
+    }
+
+    &--blue {
+      background-color: #00b6f1;
+    }
+
+    &--red {
+      background-color: #e23232;
+    }
+
+    &--grey {
+      background-color: #f0efef;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    position: relative;
+    right: 100px;
+
+    @media (max-width: $tabletBreakpoint) {
+      width: 225px;
+      right: 0;
+    }
+  }
+}

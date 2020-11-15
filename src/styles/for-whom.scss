@@ -1,18 +1,22 @@
 .for-whom {
-  // background: url(../images/gear.png) no-repeat;
+  background: url(../images/gear-blue.png) no-repeat;
   background-color: $c-accent;
   color: #fff;
-  position: relative;
-  @include container;
+
+  @media (max-width: $bigScreenBreakpoint) {
+    background-size: 20%;
+  }
+
+  @media (max-width: 1000px) {
+    background: none;
+  }
 
   &__container {
-    padding-top: 100px;
-    padding-bottom: 220px;
-    position: relative;
+    padding-bottom: 80px;
+    display: flex;
 
-    @media (max-width: $desktopBreakpoint) {
-      padding-top: 50px;
-      padding-bottom: 110px;
+    @media (max-width: 1000px) {
+      display: block;
     }
 
     @media (max-width: $tabletBreakpoint) {
@@ -23,10 +27,16 @@
   &__title {
     font-size: 20px;
     text-transform: uppercase;
+    margin-top: 100px;
     margin-bottom: 98px;
 
-    @media (max-width: $desktopBreakpoint) {
-      margin-bottom: 50px;
+    @media (max-width: $bigScreenBreakpoint) {
+      margin: 50px 0;
+    }
+
+    @media (max-width: 1000px) {
+      margin-top: 0;
+      margin-bottom: 30px;
     }
 
     @media (max-width: $tabletBreakpoint) {
@@ -38,8 +48,10 @@
     max-width: 350px;
     font-size: 20px;
 
-    @media (max-width: $tabletBreakpoint) {
+    @media (max-width: 1000px) {
       max-width: 100%;
+      font-size: 16px;
+      padding-top: 50px;
     }
   }
 
@@ -49,55 +61,61 @@
     margin-bottom: 98px;
     gap: 30px;
 
-    @media (max-width: $desktopBreakpoint) {
+    @media (max-width: $bigScreenBreakpoint) {
       margin-bottom: 50px;
+    }
+
+    @media (max-width: 1000px) {
+      gap: 10px;
+      margin-bottom: 30px;
     }
 
     @media (max-width: $tabletBreakpoint) {
       gap: 10px;
       margin-bottom: 30px;
     }
-
-    &--span {
-      font-weight: bold;
-    }
   }
 
   &__button {
     width: 270px;
     height: 50px;
+    border-radius: 100px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     color: $c-accent;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 16px;
     letter-spacing: 0.08em;
+    transition: box-shadow 0.3s;
 
-    @media (max-width: $tabletBreakpoint) {
+    &:hover {
+      box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 1000px) {
       margin-bottom: 30px;
+    }
+
+    @media (max-width: $mobileBreakpoint) {
+      width: 100%;
     }
   }
 
   &__img {
-    position: absolute;
+    position: relative;
     top: -62px;
-    right: -380px;
+    right: -55px;
     object-fit: cover;
     object-position: 0%;
 
-    @media (max-width: 1170px) {
-      width: calc(100% - 380px);
-      right: 0;
+    @media (max-width: $bigScreenBreakpoint) {
+      width: calc(100% - 400px);
     }
 
     @media (max-width: 1000px) {
-      height: 100%;
-      object-fit: contain;
-      bottom: 0;
-    }
-
-    @media (max-width: $tabletBreakpoint) {
-      position: static;
       width: 100%;
+      top: 0;
+      right: 0;
     }
   }
 }
