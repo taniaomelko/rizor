@@ -1,6 +1,7 @@
 .header {
   background-color: #fff;
   position: relative;
+  z-index: 1;
   top: -100px;
 
   &__container {

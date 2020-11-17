@@ -72,9 +72,14 @@
 
   &__watch-video {
     position: absolute;
-    top: 50%;
+    top: calc(50% - 50px);
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
+
+    @media (max-width: 1000px) {
+      top: calc(50% - 100px);
+    }
   }
 
   &__info {
@@ -145,6 +150,7 @@
     margin-bottom: 83px;
     position: relative;
     top: -100px;
+    opacity: 0;
 
     @media (max-width: $bigScreenBreakpoint) {
       margin-top: 50px;
@@ -154,6 +160,7 @@
     @media (max-width: 1000px) {
       margin-top: 0;
       margin-bottom: 40px;
+      top: -80px;
     }
   }
 
@@ -174,14 +181,22 @@
     color: #fff;
 
     @media (max-width: $bigScreenBreakpoint) {
-      display: none;
+      top: 800px;
+      right: auto;
+      transform: rotate(0deg);
+      font-size: 120px;
+      text-align: left;
+    }
+
+    @media (max-width: $desktopBreakpoint) {
+      top: 550px;
     }
 
     @media (max-width: $tabletBreakpoint) {
-      display: block;
       top: -50px;
       right: 250px;
-      font-size: 120px;
+      transform: rotate(-90deg);
+      text-align: right;
     }
 
     @media (max-width: $mobileBreakpoint) {

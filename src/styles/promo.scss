@@ -14,6 +14,7 @@
   @media (max-width: 1000px) {
     padding-bottom: 80px;
     background: none;
+    height: 100vh;
   }
 
   @media (max-width: $mobileBreakpoint) {
@@ -52,6 +53,11 @@
     font-family: "RubikMonoOne", sans-serif;
     font-size: 80px;
     letter-spacing: 0.08em;
+    transition: text-shadow 0.3s;
+
+    &:hover {
+      text-shadow: 2px 5px $c-accent;
+    }
 
     @media (max-width: $bigScreenBreakpoint) {
       font-size: 70px;

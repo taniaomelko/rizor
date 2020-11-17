@@ -6,6 +6,23 @@ document.querySelector('.mobile-menu__list').onclick = () => {
   document.querySelector('.header__toggler').checked = false;
 };
 
+const points = document.querySelector('.text-block__points');
+const pointsAll = document.querySelectorAll('.text-block__point');
+
+points.addEventListener('click', function(event) {
+  for (const elem of [...pointsAll]) {
+    if (elem.className.includes('text-block__point--active')) {
+      elem.className = elem.className.replace('text-block__point--active', '');
+    }
+  }
+
+  if (event.target.className === 'text-block__points') {
+    return;
+  }
+
+  event.target.className += ' text-block__point--active';
+});
+
 const animImg = {
   duration: 0.7,
   ease: 'sine.inOut',
@@ -28,7 +45,7 @@ function getTrigger(className) {
   return {
     scrollTrigger: {
       trigger: className,
-      start: 'top top+=70%',
+      start: 'top top+=80%',
     },
   };
 };
@@ -53,7 +70,8 @@ window.onload = () => {
 
   gsap.to('.pros__title', {
     ...getTrigger('.pros__title'),
-    y: 100,
+    top: 0,
+    opacity: 1,
   });
 
   gsap.to('.pros__blocks', {
@@ -66,18 +84,19 @@ window.onload = () => {
     ...animImg,
   });
 
+  gsap.to('.pros__watch-video', {
+    ...getTrigger('.pros__watch-video'),
+    opacity: 1,
+    y: 50,
+  });
+
   gsap.to('.pros__bg', {
     ...getTrigger('.pros__bg'),
     color: '#f8f8f8',
   });
 
   gsap.to('.text-block__point', {
-    scrollTrigger: {
-      trigger: '.text-block__point',
-      toggleActions: 'restart pause reverse pause',
-      start: 'top top+=70%',
-      end: '+=500',
-    },
+    ...getTrigger('.text-block__points'),
     opacity: 1,
     stagger: { each: 0.1 },
   });
