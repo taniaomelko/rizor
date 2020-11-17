@@ -1,5 +1,6 @@
 .pros {
   padding-bottom: 175px;
+  position: relative;
 
   @media (max-width: $bigScreenBreakpoint) {
     padding-bottom: 120px;
@@ -52,16 +53,11 @@
   }
 
   &__img {
-    position: relative;
     object-fit: cover;
+    opacity: 0;
 
     @media (max-width: $desktopBreakpoint) {
       width: 100%;
-      height: $videoHeightDesktop;
-    }
-
-    @media (max-width: 1000px) {
-      position: relative;
       height: $videoHeightDesktop;
     }
 
@@ -93,6 +89,8 @@
     display: grid;
     grid-template-columns: 270px 225px;
     gap: 160px;
+    position: relative;
+    left: 100vw;
 
     @media (max-width: $bigScreenBreakpoint) {
       grid-template-columns: 300px;
@@ -145,6 +143,8 @@
     color: $c-accent;
     margin-top: 100px;
     margin-bottom: 83px;
+    position: relative;
+    top: -100px;
 
     @media (max-width: $bigScreenBreakpoint) {
       margin-top: 50px;
@@ -163,7 +163,6 @@
     letter-spacing: 0.08em;
     text-align: right;
     line-height: 100%;
-    color: #f8f8f8;
     transform: rotate(-90deg);
     transform-origin: right top;
     position: absolute;
@@ -172,6 +171,7 @@
     display: block;
     width: 800px;
     z-index: -1;
+    color: #fff;
 
     @media (max-width: $bigScreenBreakpoint) {
       display: none;

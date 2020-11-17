@@ -30,6 +30,8 @@
 
   &__info {
     padding-top: 200px;
+    position: relative;
+    left: -100vw;
 
     @media (max-width: $bigScreenBreakpoint) {
       padding-top: 85px;
@@ -105,6 +107,9 @@
     width: 11px;
     height: 95px;
     margin-left: 30px;
+    position: relative;
+    top: -100px;
+    opacity: 0;
 
     @media (max-width: $bigScreenBreakpoint) {
       display: none;
@@ -120,6 +125,7 @@
     object-fit: cover;
     right: 265px;
     z-index: -1;
+    opacity: 0;
 
     @media (max-width: $bigScreenBreakpoint) {
       width: calc(100% + 265px);
@@ -144,8 +150,9 @@
   }
 
   &__watch-video {
-    top: 90px;
+    top: 190px;
     left: -340px;
+    opacity: 0;
 
     @media (max-width: $bigScreenBreakpoint) {
       left: -300px;
@@ -157,8 +164,9 @@
     width: 18px;
     height: 72px;
     position: absolute;
-    top: 180px;
+    top: 280px;
     left: -340px;
+    opacity: 0;
 
     @media (max-width: $bigScreenBreakpoint) {
       display: none;

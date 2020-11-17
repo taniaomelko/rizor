@@ -29,6 +29,8 @@
 
   &__info {
     padding: 100px 0;
+    position: relative;
+    left: -100vw;
 
     @media (max-width: $desktopBreakpoint) {
       padding: 50px 0;
@@ -92,12 +94,13 @@
   }
 
   &__watch-video {
-    top: 600px;
+    top: 700px;
     left: 65px;
+    opacity: 0;
 
     @media (max-width: $bigScreenBreakpoint) {
       left: -40px;
-      top: 100px;
+      top: 200px;
     }
   }
 
@@ -106,8 +109,9 @@
     width: 157px;
     height: 474px;
     position: absolute;
-    top: 120px;
+    top: 220px;
     left: -75px;
+    opacity: 0;
 
     @media (max-width: $bigScreenBreakpoint) {
       display: none;
@@ -119,6 +123,7 @@
     object-fit: cover;
     right: -140px;
     z-index: -1;
+    opacity: 0;
 
     @media (max-width: $bigScreenBreakpoint) {
       width: 100%;
